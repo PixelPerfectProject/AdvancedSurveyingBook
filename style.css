@@ -1,0 +1,466 @@
+*{
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #020242;
+    font-family:"Poppins", sans-serif;
+    color: white;
+}
+h1{
+    font-size: 46px;
+    margin-bottom: 9px;
+    text-align: center;
+    padding: 8px 0px 0px 0px;
+}
+.menu .toggle img {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    display: none;
+    top: 6px;
+    right: 8px;
+    z-index: 99;
+}
+#nav{
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+h2 {
+    color: yellow;
+    font-size: 40px;
+    text-align: center;
+    background-color: black;
+}
+#nav .btn{
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    background-color: #0026ff13;
+    font-size: 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+.btn::before,
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.btn::before {
+    border: 2px solid #fff;
+    transform: scaleX(0);
+    filter: blur(5px);
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.5s ease-out;
+}
+.btn:hover::before {
+    transform: scaleX(1); 
+    transform-origin: left;
+}
+.btn::after {
+    transform: scale(0.7);
+    filter: blur(15px);
+}
+.btn:hover::after{
+    opacity: 1;
+    transform: scale(1);
+}
+.btn:hover::before,
+.btn:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+#nav .btn:hover{
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.sticky{
+    display: block;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+#qna{
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+h3{
+    margin: 15px 0px;
+    padding-left: 23px;
+}
+#qna p button {
+    font-size: 19px;
+    font-weight: bold;
+    padding: 5px 20px;
+    margin: 3px 0;
+    background: none;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: color 0.4s ease-in-out;
+    color: rgb(255, 174, 1);
+    position: relative;
+    border: 2px solid rgb(8, 8, 238);
+    overflow: hidden;
+}
+
+#qna p button::before,
+#qna p button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000; 
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+#qna p button::before {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+#qna p button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#qna p button::after {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+#qna p button:hover::after {
+    transform: scaleX(1);
+}
+/* Search container styling */
+.search-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 40px;
+
+}
+
+#input {
+    width: 350px; 
+    height: 45px; 
+    padding: 10px 100px 10px 20px; 
+    border-radius: 25px;
+    border: 1px solid #ccc; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease; 
+
+}
+
+/* Hover and focus effects */
+#input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* Search button styling */
+.search-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: #4285F4; 
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for search button */
+.search-btn:hover {
+    background-color: #357ae8; 
+}
+.searchResult {
+    margin: 22px 0px 20px 40px;
+}
+.searchResult div {
+    margin: 21px 0px 0px 7px;
+}
+.searchResult div p:first-child{
+    color: rgb(255, 196, 0);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.searchResult div p:last-child{
+    font-size: 17px;
+}
+
+.bookMarkContainer{
+    right: 7px;
+    bottom:7px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    z-index:1;
+    cursor: pointer;
+    transition: 0.4s ;
+}
+.bookMarkContainer:hover{
+    background-color: gold;
+}
+.bookMarkContainer .progress {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ff00ff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: 0.3s;
+} 
+.bookMarkContainer .progress:hover{
+    background-color: white;
+} 
+.bookMarkContainer .progress img {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 70px;
+    transition: 0.4s;
+}
+.bookMarkContainer .progress img:hover{
+    transform: scale(1.2);
+}
+.showValue {
+    position: absolute;
+    top: 30px;
+    right: 22px;
+    font-weight: bolder;
+    font-size: 18px;
+    color: black;
+}
+.addBookMark{
+    background-image: url('image/starWithoutFill.png');
+    width: 30px;
+    height: 30px;
+    border: 4px solid green;
+    border-radius: 50%;
+    background-color: green;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+
+}
+/********* .progressAndBookmark .bookMarkContainer************ */
+
+.progressAndBookmark{
+    width: 100%;
+    background-color: green;
+}
+.progressAndBookmark .showProgress{
+    position: relative;
+}
+.progressAndBookmark .showProgress h4 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 23px;
+}
+
+#bookMarkContainer2 {
+    position: relative;
+    margin: 50px auto 10px auto;
+    width: 200px;
+    height: 200px;
+    cursor: default;
+}
+#bookMarkContainer2 .progress {
+    width: 175px;
+    height: 175px;
+    left: 12px;
+    top: 12px;
+}
+#bookMarkContainer2 .progress img {
+    width: 173px;
+    height: 176px;
+    top: -3px;
+    left: 2px;
+}
+#bookMarkContainer2 .progress #showValue2 {
+    font-size: 37px;
+    top: 66px;
+    right: 49px;
+}
+.statistics{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    background-color: black;
+    margin: auto;
+    padding: 10px;
+    gap: 20px;
+    text-align: center;
+    z-index:-45;
+}
+.statistics div p {
+    font-size: 20px;
+    /* padding: 20px; */
+    padding: 4px 0px 11px 0px;
+}
+/* বুকমার্ক দেখানোর কাজ এখানে  */
+
+.showBookmark .bookmarkTitle h4 {
+    text-align: center;
+    font-size: 30px;
+    margin: 16px 0px 0px 0px;
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+}
+.showBookmark .bookmarkDetails {
+    padding: 37px 0px 20px 27px;
+    background-color: rgb(18, 61, 4);
+}
+.showBookmark .bookmarkDetails p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.showBookmark .bookmarkDetails h4 {
+    background-color: green;
+    padding: 9px 0px 7px 10px;
+    margin-top:4px;
+}
+.bookmarkStyle {
+    background-color: #10b91021;
+    margin-left: 10px;
+    font-weight: bolder;
+    color: gold;
+}
+/* animated ********************************* button  */
+
+.closeAllBookmark {
+    background-color: rgb(1, 1, 51);
+    height: 152px;
+    display: flex;
+    justify-content: center;
+    margin: 49px 0px 0px 0xp;
+    padding: 1px 6px 28px 7px;
+}
+a {
+    position: absolute;
+    color: #34ffea;
+    overflow: hidden;
+    font-size: 30;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 20px 50px rgb(255 255 255 / 5%);
+    margin: 16px 0px 0px 1px;
+    padding: 39px 47px 32px 63px;
+    font-size: 24px;
+}
+a:before{
+	position: absolute;
+	width: 50%;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	content: '';
+	background: rgb(142 255 240 / 10%);
+}
+a span:nth-child(1) {
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to right, #002b9d, #34ffea);
+	animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+	0%{
+		transform: translateX(-100%);
+	}
+	100%{
+		transform: translateX(100%);
+	}
+}
+a span:nth-child(2) {
+	position: absolute;
+	width: 5px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background: linear-gradient(to bottom, #002b9d, #34ffea);
+	animation: animate2 2s linear infinite;
+	animation-delay: 1s;
+}
+@keyframes animate2{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(100%);
+	}
+}
+a span:nth-child(3) {
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	left: 0;
+	bottom: 0;
+	background: linear-gradient(to left, #002b9d, #34ffea);
+	animation: animate3 2s linear infinite;
+}
+@keyframes animate3{
+	0%{
+		transform: translateX(100%);
+	}
+	100%{
+		transform: translateX(-100%);
+	}
+}
+a span:nth-child(4) {
+	position: absolute;
+	width: 5px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to top, #002b9d, #34ffea);
+	animation: animate4 2s linear infinite;
+	animation-delay: 1s;
+}
+@keyframes animate4{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(-100%);
+	}
+}

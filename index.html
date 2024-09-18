@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Surveying Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="toggle" id="toggle" onclick="expand()">
+            <i class="material-icons" id="toggle1">
+              <img id="img" src="image/app-drawer.png" alt="MENU">
+            </i>
+          </div>
+        <nav id="nav" class="nav">
+            <button class="btn">১ম অধ্যায়</button>
+            <button class="btn">২য় অধ্যায়</button>
+            <button class="btn">৩য় অধ্যায়</button>
+            <button class="btn">৪র্থ অধ্যায়</button>
+            <button class="btn">৫ম অধ্যায়</button>
+            <button class="btn">৬ষ্ঠ অধ্যায়</button>
+            <button class="btn">৭ম অধ্যায়</button>
+            <button class="btn">৮ম অধ্যায়</button>
+            <button class="btn">৯ম অধ্যায়</button>
+            <button class="btn">১০ম অধ্যায়</button>
+            <button class="btn">১১শ অধ্যায়</button>
+        </nav>
+    </div>
+ 
+    <h1 id="bookName">Advanced Surveying</h1>
+
+    <h2 id="chapter">১ম অধ্যায়</h2>
+
+    <div class="search-container">
+        <input type="text" id="input" oninput="searchResult()" placeholder="প্রশ্ন টাইপ করুন">
+        <span class="search-btn">খুজুন</span>
+    </div>
+    <div id="searchResults" class="searchResult"></div>
+
+    <div id="qna">
+        <p id="Q"> </p>
+        <h3 id="Ans"> </h3>
+    </div>
+
+    <div id="bookMarkContainer" class="bookMarkContainer">
+        <div class="progress">
+            <img src="image/starWithFill.png" alt="">
+            <div id="showValue" class="showValue"></div>
+        </div>
+    </div>
+
+
+    <div id="progressAndBookmark" class="progressAndBookmark">
+        <div id="showProgress" class="showProgress">
+            <h4>আপনার প্রগ্রেস এখানে উপলব্ধ আছে ।</h4>
+            <div id="bookMarkContainer2" class="bookMarkContainer ">
+                <div class="progress ">
+                    <img src="image/starWithFill.png" alt="">
+                    <div id="showValue2" class="showValue"></div>
+                </div>
+            </div>
+            <div class="statistics">
+                <div>
+                    <p>প্রশ্ন আছে</p>
+                    <p id="totalQuestions"></p>
+                </div>
+                <div>
+                    <p>খোলেছেন</p>
+                    <p id="opened">**</p>
+                </div>
+                <div>
+                    <p>বাকি আছে</p>
+                    <p id="remaining">**</p>
+                </div>
+                <div>
+                    <p>শতাংশ</p>
+                    <p id="percentage">**</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="showBookmark" class="showBookmark">
+            <div class="bookmarkTitle">
+                <h4>বুকমার্ক করা প্রতিটা প্রশ্ন যাচাই করুন </h4>
+            </div>
+            <div id="bookmarkDetails" class="bookmarkDetails">
+                
+            </div>
+        </div>
+
+        <div id="closeAllBookmark" class="closeAllBookmark">
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                সমস্ত বুকমার্ক সড়ান
+            </a>
+        </div>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
