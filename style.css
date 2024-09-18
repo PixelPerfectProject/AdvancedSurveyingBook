@@ -464,3 +464,82 @@ a span:nth-child(4) {
 		transform: translateY(-100%);
 	}
 }
+
+@media (max-width:600px) {
+    .menu{
+        padding-top: 15px;
+    }
+    #bookName{
+        font-size: 60px;
+    }
+    .search-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        background-color: #4285F4; 
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    #input{
+        width: 300px; 
+        height: 45px; 
+        border-radius: 25px;
+        border: 1px solid #ccc; 
+        background-color: rgba(255, 255, 255, 0.8); 
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease; 
+    }
+    .bookMarkContainer{
+        width: 80px;
+        height: 80px;
+        position: fixed;
+    }
+    .bookMarkContainer .progress {
+        width: 67px;
+        height: 67px;
+        top: 6px;
+        left: 7px;
+    }
+    .bookMarkContainer .progress img {
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 70px;
+        transition: 0.4s;
+        width: 64px;
+    }
+    #qna p button {
+        font-size: 15px;
+    }
+    #qna p h3 {
+        margin: 15px 0px;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    .searchResult div p:first-child {
+        color: rgb(255, 196, 0);
+        font-size: 19px;
+        margin-bottom: 8px;
+    }
+    .searchResult {
+        margin: 23px 0px 21px 10px;
+        padding-right: 6px;
+    }
+    .progressAndBookmark .showProgress h4 {
+        text-align: center;
+        font-size: 30px;
+        padding: 8px 6px 4px 6px;
+    }
+    a {
+        position: absolute;
+        color: #34ffea;
+        font-size: 30;
+        margin: 16px 0px 0px 1px;
+        padding: 26px 20px 33px 29px;
+        font-size: 20px;
+    }
+}
